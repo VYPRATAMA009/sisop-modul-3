@@ -1,7 +1,4 @@
-# sisop-modul-3
 # Thread dan IPC
-
-
 
 ## Objectives
 1. Peserta mengetahui thread
@@ -24,7 +21,9 @@
   - [Appendix](#appendix)
     - [Libraries documentation (and functions)](#libraries-documentation-and-functions)
   - [Soal Latihan](#soal-latihan)
- 
+      - [Latihan 1](#latihan-1)
+      - [Latihan 2](#latihan-2)
+      - [Latihan 3](#latihan-3)
     - [References](#references)
 
 
@@ -668,7 +667,19 @@ $ man fcntl
 
 ## Soal Latihan 
 
+#### Latihan 1
+Buatlah sebuah program multithreading yang dapat menyalin isi file baca.txt ke dalam file salin1.txt. Kemudian menyalin isi dari file salin1.txt ke dalam file salin2.txt!
 
+#### Latihan 2
+Buatlah sebuah program multithreading yang dapat menampilkan bilangan prima dari 1-N. program akan dieksekusi menggunakan thread sebanyak T dimana setiap thread akan melakukan pencarian bilangan prima dengan range N/T (range tiap thread berbeda), kemudian tiap thread akan menampilkan hasilnya.
+
+misalkan N = 100 dan T=2; jadi thread 1 akan mencari bilangan prima dari 1-50 dan thread 2 akan mencari dari 51-100
+
+#### Latihan 3  
+Buatlah sebuah program untuk menampilkan file diurutan ketiga dari sebuah direktori. Dengan ketentuan :  
+- menggunakan pipe.
+- menggunakan command ls, head, tail.
+<!-- diganti soal pipe -->
 
 ### References 
 https://notes.shichao.io/apue/  
