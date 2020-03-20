@@ -174,6 +174,17 @@ Terlihat ketika program menggunakan thread dapat menjalankan dua task secara ber
 
 ![multivsmulti](multiprocessing_multithreading.gif)
 
+Perbedaan multiprocess dan multithread
+Nomor | Multiprocess | Multithread
+--- | --- | ---
+1 | banyak proses dieksekusi secara konkuren | banyak thread dalam 1 proses dieksekusi secara konkuren
+2 | menambah CPU untuk menigkatkan kekuatan komputasi | membuat banyak thread dalam 1 proses untuk meningkatkan kekuatan komputasi
+3 | pembuatan proses membutuhkan waktu dan resource yang besar | pembuatan thread lebih ekonomis dalam segi waktu dan resource
+4 | bergantung pada object di memori untuk mengirim data ke proses lain | tidak bergantung pada object lain
+5 |child process sebagian besar bersifat interruptible / killable | multithreading tidak bersifat interruptible / killable
+
+
+
 
 ### 1.3 Join Thread
 Join thread adalah fungsi untuk melakukan penggabungan dengan thread lain yang telah berhenti (*terminated*). Bila thread yang ingin di-join belum dihentikan, maka fungsi ini akan menunggu hingga thread yang diinginkan berstatus **`Terminated`**. Fungsi `pthread_join()` ini dapat dikatakan sebagai fungsi `wait()` pada proses, karena program (*task*) utama akan menunggu thread yang di-join-kan pada program utama tersebut. Kita tidak mengetahui program utama atau thread yang lebih dahulu menyelesaikan pekerjaannya.
