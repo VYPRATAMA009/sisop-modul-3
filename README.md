@@ -9,8 +9,9 @@
   - [Objectives](#objectives)
   - [1. Thread](#1-thread)
     - [1.1 Thread](#11-thread)
-    - [1.2 Join Thread](#12-join-thread)
-    - [1.3 Mutual Exclusion](#13-mutual-exclusion)
+    - [1.2 Multiprocess vs Multithread](#12-multiprocess-vs-multithread)
+    - [1.3 Join Thread](#13-join-thread)
+    - [1.4 Mutual Exclusion](#14-mutual-exclusion)
   - [2. IPC (Interprocess Communication)](#2-ipc-interprocess-communication)
     - [2.1 IPC](#21-ipc)
     - [2.2 Pipes](#22-pipes)
@@ -168,7 +169,13 @@ int main(void)
 **Kesimpulan** :
 Terlihat ketika program menggunakan thread dapat menjalankan dua task secara bersamaan (task menampilkan gambar dan task timer).
 
-### 1.2 Join Thread
+
+### 1.2 Multiprocess Vs Multithread
+
+![multivsmulti](multiprocessing_multithreading.gif)
+
+
+### 1.3 Join Thread
 Join thread adalah fungsi untuk melakukan penggabungan dengan thread lain yang telah berhenti (*terminated*). Bila thread yang ingin di-join belum dihentikan, maka fungsi ini akan menunggu hingga thread yang diinginkan berstatus **`Terminated`**. Fungsi `pthread_join()` ini dapat dikatakan sebagai fungsi `wait()` pada proses, karena program (*task*) utama akan menunggu thread yang di-join-kan pada program utama tersebut. Kita tidak mengetahui program utama atau thread yang lebih dahulu menyelesaikan pekerjaannya.
 
 Contoh program C Join_Thread [thread_join.c](thread_join.c):
@@ -243,7 +250,7 @@ Pada program pertama tidak menjalankan fungsi `print_message_function` karena se
   ```
   Fungsi akan menunda pekerjaan sampai status pointer `rval_ptr` dari fungsi `pthread_exit()` mengembalikan nilainya.
 
-### 1.3 Mutual Exclusion
+### 1.4 Mutual Exclusion
 Disebut juga sebagai **Mutex**, yaitu suatu cara yang menjamin jika ada pekerjaan yang menggunakan variabel atau berkas digunakan juga oleh pekerjaan yang lain, maka pekerjaan lain tersebut akan mengeluarkan nilai dari pekerjaan sebelumnya.
 
 Contoh program Simple Mutual_Exclusion [threadmutex.c](threadmutex.c):
