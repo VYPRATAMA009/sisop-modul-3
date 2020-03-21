@@ -694,7 +694,7 @@ $ man fcntl
 
 #### Latihan 1
 Buatlah sebuah program multithreading untuk menghitung perkalian matriks (isi dari matriks-nya didefinisikan di dalam kodingan).
-(Contoh : matriks A dengan dimensi 3x2 dan matriks B dengan dimensi 2x3, outputnya adalah perkalian matriks A * B)
+(Contoh : matriks A dengan dimensi 3x2 dan matriks B dengan dimensi 2x3, outputnya adalah hasil dari perkalian matriks A * B)
 
 #### Latihan 2
 Buatlah sebuah program menggunakan socket dimana terdiri dari client dan server. Saat client mengetikkan "tambah" maka suatu angka yang ada pada server bertambah 1 dan server otomatis mengirimkan pesan ke client yang berisi "Penambahan berhasil". Perintah yang lainnya pada client adalah "cek", maka server akan mengirimkan pesan yang berisi jumlah terkini angka tersebut. Program ini dapat berjalan tanpa henti.
