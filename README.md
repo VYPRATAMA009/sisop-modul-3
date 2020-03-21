@@ -696,9 +696,7 @@ $ man fcntl
 Buatlah sebuah program multithreading yang dapat menyalin isi file baca.txt ke dalam file salin1.txt. Kemudian menyalin isi dari file salin1.txt ke dalam file salin2.txt!
 
 #### Latihan 2
-Buatlah sebuah program multithreading yang dapat menampilkan bilangan prima dari 1-N. program akan dieksekusi menggunakan thread sebanyak T dimana setiap thread akan melakukan pencarian bilangan prima dengan range N/T (range tiap thread berbeda), kemudian tiap thread akan menampilkan hasilnya.
-
-misalkan N = 100 dan T=2; jadi thread 1 akan mencari bilangan prima dari 1-50 dan thread 2 akan mencari dari 51-100
+Buatlah sebuah program menggunakan socket dimana terdiri dari client dan server. Saat client mengetikkan "tambah" maka suatu angka yang ada pada server bertambah 1 dan server otomatis mengirimkan pesan ke client yang berisi "Penambahan berhasil". Perintah yang lainnya pada client adalah "cek", maka server akan mengirimkan pesan yang berisi jumlah terkini angka tersebut. Program ini dapat berjalan tanpa henti.
 
 #### Latihan 3  
 Buatlah sebuah program untuk menampilkan file diurutan ketiga dari sebuah direktori. Dengan ketentuan :  
